@@ -6,7 +6,7 @@ The purpose of this repository is for me to have a place where I’m practicing 
 
 On Macos, I use the =brew= ecosystem.  I need some dependencies installed:
 
-- =brew install python=
+- =brew install python= :: If I’m going to play with Python, I should probably install it.
 - =brew install uv= :: a Rust based package manager for Python.
 
 * Emacs and Python
@@ -65,9 +65,14 @@ I’m also considering installing [[https://github.com/Crandel/tempel-collection
 :ID:       25089338-2095-4FEE-B006-53B7D24BA1EA
 :END:
 
-- [[./static-method.py][static-method.py]] :: Exploring the =@staticmethod= directive while also reviewing [[https://python-patterns.guide/gang-of-four/abstract-factory/][The Abstract Factory Pattern]].
+I have individual practice files, with comments around connecting Python concepts to Ruby counterparts.
+
+- [[./exceptions.py][exceptions.py]] :: A simple reference of the exception handling construction of Python.
 - [[./introspection.py][introspection.py]] :: Exploring named parameters and object introspection.
 - [[./iterator.py][iterator.py]] :: Exploring some of the iterators; though there are more reflections below.
+- [[./static-method.py][static-method.py]] :: Exploring the =@staticmethod= directive while also reviewing [[https://python-patterns.guide/gang-of-four/abstract-factory/][The Abstract Factory Pattern]].
+
+In addition to the Python files, I have written further discussion regarding other topics; see below.
 
 ** Iterator
 :PROPERTIES:
