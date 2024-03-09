@@ -105,4 +105,4 @@ The same applies with starting a dictionary.
 
 Put another way, while I’m familiar with Ruby’s various iterator functions and their blocks, Python front-loads the “What is this object?”  Ruby says “Noun, verb, object” and Python says “Object, verb from noun.”
 
-Though a letting local variable can also provide guidance on what the “map” is.
+Though setting the results into a local variable can also provide guidance on what the “map” is.  And that named variable is declared before the mapping.
