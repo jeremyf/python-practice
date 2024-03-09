@@ -1,20 +1,15 @@
 #+TITLE: Python Pracitce
 
-* Python Practice
-:PROPERTIES:
-:ID:       E6DC7E8B-F186-43A7-BE6E-65D80E10D622
-:END:
-
 The purpose of this repository is for me to have a place where I’m practicing Python.
 
-** System Installation
+* System Installation
 
 On Macos, I use the =brew= ecosystem.  I need some dependencies installed:
 
 - =brew install python=
 - =brew install uv= :: a Rust based package manager for Python.
 
-** Emacs and Python
+* Emacs and Python
 :PROPERTIES:
 :ID:       40BD2EE0-878B-4902-BC1D-41993B3DE14B
 :END:
@@ -65,7 +60,7 @@ With =python-mode= enabled, I typed =C-c C-c= and Emacs prompted me to start a P
 
 I’m also considering installing [[https://github.com/Crandel/tempel-collection/tree/main][Crandel/tempel-collection: Collection tempel templates]]; there’s some templates for Python.  I’ve already found the occasional line ending in =:= is a bit jarring; it’s one of those “I definitely want a linter running to remind me of this missing value.”
 
-** The Practice Files
+* The Practice Files
 :PROPERTIES:
 :ID:       25089338-2095-4FEE-B006-53B7D24BA1EA
 :END:
@@ -74,7 +69,7 @@ I’m also considering installing [[https://github.com/Crandel/tempel-collection
 - [[./introspection.py][introspection.py]] :: Exploring named parameters and object introspection.
 - [[./iterator.py][iterator.py]] :: Exploring some of the iterators; though there are more reflections below.
 
-*** Iterator
+** Iterator
 :PROPERTIES:
 :ID:       77C25B8E-F9C3-4198-A45C-E520D46C90BF
 :END:
