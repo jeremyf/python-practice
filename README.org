@@ -70,6 +70,7 @@ I have individual practice files, with comments around connecting Python concept
 - [[./exceptions.py][exceptions.py]] :: A simple reference of the exception handling construction of Python.
 - [[./introspection.py][introspection.py]] :: Exploring named parameters and object introspection.
 - [[./iterator.py][iterator.py]] :: Exploring some of the iterators; though there are more reflections below.
+- [[./object-instantiation.py][object-instantiation.py]] :: Looking at default values for object’s fields/properties.
 - [[./static-method.py][static-method.py]] :: Exploring the =@staticmethod= directive while also reviewing [[https://python-patterns.guide/gang-of-four/abstract-factory/][The Abstract Factory Pattern]].
 
 In addition to the Python files, I have written further discussion regarding other topics; see below.
