@@ -11,4 +11,5 @@ for symbol, weight in d.items():
 # This is analogous to Ruby's #each_with_object({})
 print({symbol: weight for symbol, weight in d.items() if weight > 5})
 
+# Analogous to #each_with_object([])
 print(list(symbol for symbol, weight in d.items() if weight > 5))

@@ -1,3 +1,4 @@
+
 # This is my notes for https://python-patterns.guide/gang-of-four/abstract-factory/
 #
 # NOTE: We specifically name what we're importing
