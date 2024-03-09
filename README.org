@@ -1,0 +1,62 @@
+* Python Practice
+:PROPERTIES:
+:ID:       E6DC7E8B-F186-43A7-BE6E-65D80E10D622
+:END:
+
+The purpose of this repository is for me to have a place where I’m practicing Python.
+
+** Emacs and Python
+:PROPERTIES:
+:ID:       40BD2EE0-878B-4902-BC1D-41993B3DE14B
+:END:
+
+
+I added the following to [[https://github.com/jeremyf/dotemacs][my Emacs configuration]]:
+
+#+begin_src emacs-lisp
+  (use-package python
+    :straight (:type built-in)
+    :hook (python-mode . jf/python-mode-configurator)
+    :config
+    (defun jf/python-mode-configurator ()
+      (eldoc-mode t)
+      (python-docstring-mode t)
+      (setq-default python-indent-offset 4)
+      ;; I’m loving an 80 column fill…Why?  Because on my small computer I can
+      ;; have 4 windows laid out in a quadrant and see all of the code/text.
+      (setq-local fill-column 80)))
+
+  ;; The treesit package of Emacs 29+ behaves a bit different.
+  (add-hook 'python-ts-mode-hook #'jf/python-mode-configurator)
+
+  ;; A Python syntax validator/linter.
+  (use-package flymake-ruff
+    :straight t
+    :hook (eglot-managed-mode . flymake-ruff-load))
+
+  ;; To provide some syntax highlighting of docstrings, and more.
+  (use-package python-docstring
+    :straight t)
+
+  ;; To create narrowable groups
+  (dolist (python '(python-mode python-ts-mode))
+  (add-to-list 'consult-imenu-config
+    `(,python
+       :toplevel "Method"
+       :types ((?f "Field" font-lock-variable-name-face)
+                (?c "Class" font-lock-type-face)
+                (?m "Method" font-lock-function-name-face)
+                (?v "Variable" font-lock-variable-name-face)
+                ))))
+#+end_src
+
+I started reading [[https://python-patterns.guide/][Brandon Rhodes’ Python Patterns]]; a dear friend with whom I have dinner and beers every Thursday evening.
+
+With =python-mode= enabled, I typed =C-c C-c= and Emacs prompted me to start a Python process by typing =C-c C-p=.  I started the process, and went back to my Python code, then typed =C-c C-c= and the print statements were echoed to that Python process.  Super helpful for introspection.
+
+** The Practice Files
+:PROPERTIES:
+:ID:       25089338-2095-4FEE-B006-53B7D24BA1EA
+:END:
+
+- [[./static-method.py][static-method.py]] :: Exploring the =@staticmethod= directive while also reviewing [[https://python-patterns.guide/gang-of-four/abstract-factory/][The Abstract Factory Pattern]].
