@@ -60,3 +60,27 @@ With =python-mode= enabled, I typed =C-c C-c= and Emacs prompted me to start a P
 :END:
 
 - [[./static-method.py][static-method.py]] :: Exploring the =@staticmethod= directive while also reviewing [[https://python-patterns.guide/gang-of-four/abstract-factory/][The Abstract Factory Pattern]].
+
+*** Iterator
+:PROPERTIES:
+:ID:       77C25B8E-F9C3-4198-A45C-E520D46C90BF
+:END:
+
+As I read [[https://python-patterns.guide/gang-of-four/iterator/][The Iterator Pattern]], I’m mapping these concepts to Ruby.
+
+Below we map the symbols of elements with an atomic weight greater than 5.
+
+#+begin_src python
+  dictionary = {'H': 1.008, 'He': 4.003, 'Li': 6.94}
+  list(symbol for symbol, weight in dictionary.items() if weight > 5)
+  
+  # Analogous to the above
+  [symbol for symbol, weight in d.items() if weight > 5]
+#+end_src
+
+#+begin_src ruby
+  dictionary = { H: 1.008, He: 4.003, Li: 6.94 }
+  dictionary.each_with_object([]) { |(symbol, weight), array| array << symbol.to_s if weight > 5 }
+#+end_src
+
+Both return an Array of one element; namely =["Li"]=.
