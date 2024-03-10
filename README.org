@@ -3,6 +3,9 @@
 The purpose of this repository is for me to have a place where I’m practicing Python.
 
 * System Installation
+:PROPERTIES:
+:ID:       5A39D4C7-7977-4BDD-9A93-D67C7C8366FE
+:END:
 
 On Macos, I use the =brew= ecosystem.  I need some dependencies installed:
 
@@ -65,11 +68,25 @@ With =python-mode= enabled, I typed =C-c C-c= and Emacs prompted me to start a P
 I’m also considering installing [[https://github.com/Crandel/tempel-collection/tree/main][Crandel/tempel-collection: Collection tempel templates]]; there’s some templates for Python.  I’ve already found the occasional line ending in =:= is a bit jarring; it’s one of those “I definitely want a linter running to remind me of this missing value.”
 
 ** Exploring LSP Options
+:PROPERTIES:
+:ID:       2D7B1B17-E03B-4D10-893A-66148BD28901
+:END:
 
-I’ve been back and forth on which LSP package to use.  I started with =python-lsp-server=, I was a bit overwhelmed looking at https://gist.github.com/doolio/8c1768ebf33c483e6d26e5205896217f.  So I explored =lsp-pyright=, but as someone who favors the simplicity of =eglot=, I went back to =python-lsp-server.
+I’ve been back and forth on which LSP package to use.  I started with =python-lsp-server=, I was a bit overwhelmed looking at https://gist.github.com/doolio/8c1768ebf33c483e6d26e5205896217f.  So I explored =lsp-pyright=, but as someone who favors the simplicity of =eglot=, I went back to =python-lsp-server=.
 
 - =uv pip install "python-lsp-server[all]"=
 - =uv pip install pylsp-rope=
+
+** Documentation
+:PROPERTIES:
+:ID:       14E87EA9-3841-41D1-B4F7-E606BED5AAFF
+:END:
+
+I installed local documentation for Python 3.12 and Django 5.0 via both the [[https://github.com/astoff/devdocs.el][devdocs package]] and [[https://github.com/dash-docs-el/dash-docs][dash-docs package]].  Having long used =devdocs=, I’m currently comparing it’s features and usability with =dash-docs=.
+
+I’ve also installed the info pages for Python, providing yet another way to explore the documentation.
+
+Last, I installed the [[https://github.com/naiquevin/sphinx-doc.][sphinx-doc package]]; this provides the ~sphinx-doc~ command (bound to =C-c M-d=).  Calling that command within a method will pre-populate the docstring with parameter and return value information.  I find this useful, given that I’m learning a new syntax for documentation.
 
 * The Practice Files
 :PROPERTIES:
