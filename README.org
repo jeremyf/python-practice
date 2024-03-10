@@ -8,6 +8,10 @@ On Macos, I use the =brew= ecosystem.  I need some dependencies installed:
 
 - =brew install python= :: If I’m going to play with Python, I should probably install it.
 - =brew install uv= :: a Rust based package manager for Python.
+- brew install python-lsp-server :: wire this into Eglot for LSP functionality.
+
+- =uv venv=
+- =uv pip install virtualenv=
 
 * Emacs and Python
 :PROPERTIES:
@@ -59,6 +63,13 @@ I started reading [[https://python-patterns.guide/][Brandon Rhodes’ Python Pat
 With =python-mode= enabled, I typed =C-c C-c= and Emacs prompted me to start a Python process by typing =C-c C-p=.  I started the process, and went back to my Python code, then typed =C-c C-c= and the print statements were echoed to that Python process.  Super helpful for introspection.
 
 I’m also considering installing [[https://github.com/Crandel/tempel-collection/tree/main][Crandel/tempel-collection: Collection tempel templates]]; there’s some templates for Python.  I’ve already found the occasional line ending in =:= is a bit jarring; it’s one of those “I definitely want a linter running to remind me of this missing value.”
+
+** Exploring LSP Options
+
+I’ve been back and forth on which LSP package to use.  I started with =python-lsp-server=, I was a bit overwhelmed looking at https://gist.github.com/doolio/8c1768ebf33c483e6d26e5205896217f.  So I explored =lsp-pyright=, but as someone who favors the simplicity of =eglot=, I went back to =python-lsp-server.
+
+- =uv pip install "python-lsp-server[all]"=
+- =uv pip install pylsp-rope=
 
 * The Practice Files
 :PROPERTIES:
